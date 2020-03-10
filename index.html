@@ -49,31 +49,6 @@
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
-    <script>
-      $(document).ready(function() {
-        const slides = $("#slider .slide");
-        let slideIndex = 0;
-
-        $(slides[slideIndex]).attr("style", "opacity: 1");
-
-        $(".sliderbutton").on("click", function() {
-          if ($(this).hasClass("prev")) {
-            slideIndex--;
-            if (slideIndex < 0) {
-              slideIndex = slides.length - 1;
-            }
-            $("#slider .slide").attr("style", "opacity: 0");
-            $(slides[slideIndex]).attr("style", "opacity: 1");
-          } else {
-            slideIndex++;
-            if (slideIndex > slides.length - 1) {
-              slideIndex = 0;
-            }
-            $("#slider .slide").attr("style", "opacity: 0");
-            $(slides[slideIndex]).attr("style", "opacity: 1");
-          }
-        });
-      });
-    </script>
+    <script src="assets/js/diapo.js"></script>
   </body>
 </html>
